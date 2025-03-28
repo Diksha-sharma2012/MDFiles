@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Expense</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h2 {
+            color: #444;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            background: #f4f4f4;
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        input:focus {
+            outline: none;
+            background: #fff;
+            border: 2px solid #ff6f61;
+        }
+        button {
+            width: 100%;
+            background: linear-gradient(45deg, #ff6f61, #de1d3e);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: linear-gradient(45deg, #de1d3e, #ff6f61);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>💰 Expense Tracker 💰</h2>
+        <form method="post" action="">
+            {% csrf_token %}
+            <!-- If using Django Forms -->
+            <!-- {{ form.as_p }} -->
+            
+            <input type="text" name="item" id="item" placeholder="🛍️ Enter Item" required>
+            <input type="number" name="amount" id="amount" placeholder="💲 Enter Amount" required>
+            <button type="submit">➕ Add Expense</button>
+        </form>
+    </div>
+</body>
+</html>
