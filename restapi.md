@@ -46,7 +46,7 @@ serializer.validated_data
 
 
 ## Use Case of SErialization and Deserialization:
-1. Partner application wants all employee records in json format
-
+1. Partner application wants all employee records in json format qs--->python native data type -->json data (JSONRenderer().render())
+2. Partner application sending json data to create a new employee json data--->python native data type(JSONParser().parser()) python native data type--->database supposed complex form(Deserialization)
 
 

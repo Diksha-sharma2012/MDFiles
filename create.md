@@ -104,3 +104,8 @@ class PrintEaseSignModel(models.Model):
     def get_absolute_url(self):
         return reverse("index")
 ```
+
+
+
+## To change the port number:
+`` python manage.py runserver port 8080 ``
