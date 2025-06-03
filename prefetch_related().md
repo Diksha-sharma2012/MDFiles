@@ -135,6 +135,14 @@ for cat in categories:
 ```        
  Efficient: Only 2 queries are made, no matter how many categories or products you have.
 
+## Summary
+| Feature         | `prefetch_related()`               |
+| --------------- | ---------------------------------- |
+| ✅ Good for      | `ManyToMany`, reverse `ForeignKey` |
+| ⚙️ How it works | Separate queries, join in Python   |
+| 🚀 Benefit      | Reduces number of database hits    |
+| 🚫 Avoids       | The N+1 query problem              |
+
 
 
 
